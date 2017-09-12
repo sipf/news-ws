@@ -18,7 +18,7 @@ docker run -p 8080:8080 sipf/news-ws
 You can then log to [http://127.0.0.1:8080](http://127.0.0.1:8080) to use the service or you can simply use this link : 
  [https://news-ws.herokuapp.com](https://news-ws.herokuapp.com).
  
-The login is admin and the password is password.
+The login is admin and the password is password. The heroku instance means to be demo only and there is no security constraint about it.
 
 ### Default Configuration
 
@@ -39,7 +39,13 @@ spring:
       ddl-auto: create-drop
     show-sql: true
   datasource:
-    platform: h2
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+security:
+  user:
+    name: admin
+    password: password
 
 ---
 spring:

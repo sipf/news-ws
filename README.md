@@ -1,4 +1,4 @@
-## Procedure-ws
+## News-ws
 
 This project is used for proof of concept only. Of course, you can contribute, you just need to fork 
 and PR your feature.
